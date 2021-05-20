@@ -10,14 +10,13 @@ interface IModal {
 
 const Modal: FC<IModal> = ({ children, handleClose, show = false }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
+  const closeButton = <div onClick={handleClose} className="close"></div>;
 
   return (
     <div className={showHideClassName}>
       <section className="modal-main">
+        {closeButton}
         {children}
-        <footer>
-          <Button onClick={handleClose}>X</Button>
-        </footer>
       </section>
     </div>
   );

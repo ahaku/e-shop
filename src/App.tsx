@@ -25,6 +25,7 @@ function App() {
         dispatch(setGoodsAction(newGoods));
       })
       .catch((err) => {
+        dispatch(setGoodsAction([]));
         console.log(err);
       });
   }, [dispatch]);

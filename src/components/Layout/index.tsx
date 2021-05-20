@@ -10,10 +10,12 @@ const Layout: FC<ILayout> = ({ children }) => {
   return (
     <div>
       <div className="header">
-        <Link to="/">
-          <span className="header__title">E-Shop</span>
-        </Link>
-        <Link to="/orders">Orders</Link>
+        <nav className="container">
+          <Link to="/">
+            <span className="header__title">E-Shop</span>
+          </Link>
+          <Link to="/orders">Orders</Link>
+        </nav>
       </div>
       {children}
     </div>
