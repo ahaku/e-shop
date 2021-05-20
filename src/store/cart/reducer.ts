@@ -22,7 +22,7 @@ const cartReducer = function (state = initialState, action: AnyAction) {
     case REMOVE_FROM_CART:
       return {
         ...state,
-        cart: {
+        data: {
           ...state.data,
           [action.payload]: state.data[action.payload] - 1,
         },

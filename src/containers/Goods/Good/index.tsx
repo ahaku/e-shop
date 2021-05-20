@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import Button from "../../../components/Button";
+import Modal from "../../../components/Modal";
 import {
   addToCartAction,
   removeFromCartAction,
 } from "../../../store/goods/actions";
 import { IGood } from "../../../store/goods/i";
 import "./index.css";
-const GoodItem = ({ id, available, image, stock, name, price }: IGood) => {
+import GoodModalContent from "./ModalContent";
+const GoodItem = ({
+  id,
+  available,
+  image,
+  stock,
+  name,
+  price,
+  banner,
+  about,
+}: IGood) => {
   const dispatch = useDispatch();
+  const [show, setShow] = useState<boolean>(false);
 
   const addToCart = (e: any) => {
     e.stopPropagation();
@@ -16,31 +28,57 @@ const GoodItem = ({ id, available, image, stock, name, price }: IGood) => {
   };
   const removeFromCart = (e: any) => {
     e.stopPropagation();
-
     dispatch(removeFromCartAction(id));
   };
 
-  return (
-    <div className="good">
-      <div className="good__image">
-        <img src={image} alt={name} />
-      </div>
-      <strong className="good__name">
-        {name} <span>{price} $</span>
-      </strong>
+  const showModal = () => {
+    setShow(true);
+  };
 
-      <div className="good__info">
-        <small>Available: {available}</small>
+  const hideModal = () => {
+    setShow(false);
+  };
+  const removeButton = (
+    <Button onClick={removeFromCart} disabled={available === stock}>
+      Remove
+    </Button>
+  );
+  const addToCartButton = (
+    <Button onClick={addToCart} disabled={available === 0}>
+      Add to cart
+    </Button>
+  );
+  return (
+    <>
+      <div className="good" onClick={showModal}>
+        <div className="good__image">
+          <img src={image} alt={name} />
+        </div>
+        <strong className="good__name">
+          {name} <span>{price} $</span>
+        </strong>
+
+        <div className="good__info">
+          <small>Available: {available}</small>
+        </div>
+        <div className="good__controls">
+          {removeButton}
+          {addToCartButton}
+        </div>
       </div>
-      <div className="good__controls">
-        <Button onClick={removeFromCart} disabled={available === stock}>
-          Remove
-        </Button>
-        <Button onClick={addToCart} disabled={available === 0}>
-          Add to cart
-        </Button>
-      </div>
-    </div>
+      <Modal show={show} handleClose={hideModal}>
+        <GoodModalContent
+          {...{
+            name,
+            available,
+            banner,
+            about,
+            removeButton,
+            addButton: addToCartButton,
+          }}
+        />
+      </Modal>
+    </>
   );
 };
 
