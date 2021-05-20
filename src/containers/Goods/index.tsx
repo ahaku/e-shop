@@ -5,7 +5,7 @@ import "./index.css";
 import GoodItem from "./Good";
 
 const GoodsContainer = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const goods = useSelector(getGoods);
 
   if (goods.length === 0) return <div>No data</div>;
