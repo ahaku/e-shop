@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #81d8d0;
+  padding: 20px;
+}
+.header > * {
+  margin: 0px 12px;
+}
+.header__title {
+  font-weight: bold;
+}
+.header a {
+  color: white;
+  text-decoration: none;
+}
