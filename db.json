@@ -1,0 +1,113 @@
+{
+    "goods": [
+        {
+          "id": "60a67327aace9621b9076320",
+          "image": "http://placehold.it/64x64",
+          "banner": "http://placehold.it/128x128",
+          "name": "Aquasure",
+          "about": "Est culpa adipisicing exercitation deserunt cupidatat. Veniam id nostrud ullamco ipsum veniam anim sunt ipsum pariatur quis consectetur elit. Reprehenderit culpa reprehenderit reprehenderit nisi exercitation esse in. Anim occaecat voluptate aute nulla anim sint nisi laborum ad cupidatat. Aute magna voluptate pariatur pariatur eu. Commodo enim mollit enim dolor culpa est occaecat laboris est consequat aliqua eiusmod. Ea sint nostrud qui aliquip.",
+          "price": 384,
+          "stock": 14
+        },
+        {
+          "id": "60a67327654801cc481e6a9f",
+          "image": "http://placehold.it/64x64",
+          "banner": "http://placehold.it/128x128",
+          "name": "Uberlux",
+          "about": "Nisi et culpa ipsum consectetur culpa adipisicing eu ipsum. Occaecat adipisicing occaecat consectetur laborum do in voluptate aute id amet. Est sunt fugiat cupidatat qui in dolore exercitation exercitation aliquip labore aliqua dolor. Aliqua qui minim amet qui excepteur dolor cillum.",
+          "price": 1505,
+          "stock": 10
+        },
+        {
+          "id": "60a67327dface4be8f53bab8",
+          "image": "http://placehold.it/64x64",
+          "banner": "http://placehold.it/128x128",
+          "name": "Kog",
+          "about": "Sint velit incididunt minim sunt. Ut deserunt incididunt aliqua ipsum aute ad occaecat. Ut velit ipsum nulla nisi sit culpa nulla. Aliqua irure eu est cillum cillum nostrud ut Lorem nisi proident id. Lorem enim laboris in fugiat do ex do anim do. Consequat cupidatat cupidatat consectetur qui non veniam duis aliquip. Occaecat duis sunt ex magna pariatur.",
+          "price": 1581,
+          "stock": 8
+        },
+        {
+          "id": "60a67327d127d927722fb5b9",
+          "image": "http://placehold.it/64x64",
+          "banner": "http://placehold.it/128x128",
+          "name": "Ovation",
+          "about": "Ad exercitation qui dolor exercitation incididunt. Dolor enim id quis commodo nisi enim eu incididunt aliquip. Aliqua laborum in culpa commodo ex officia nostrud enim ipsum quis aute. Sint magna mollit magna est deserunt officia dolore ex et consectetur occaecat incididunt ex.",
+          "price": 416,
+          "stock": 10
+        },
+        {
+          "id": "60a67327e692729311139073",
+          "image": "http://placehold.it/64x64",
+          "banner": "http://placehold.it/128x128",
+          "name": "Pathways",
+          "about": "Lorem excepteur ut Lorem velit ex et nostrud id fugiat. Et sunt velit occaecat Lorem ea ipsum est amet excepteur sit qui. Nostrud nulla ea do excepteur velit tempor elit aliquip quis et consectetur. Aute non excepteur officia consectetur. Voluptate non reprehenderit aliquip do exercitation sunt anim pariatur dolor.",
+          "price": 629,
+          "stock": 7
+        },
+        {
+          "id": "60a67327cb30936bde8c7282",
+          "image": "http://placehold.it/64x64",
+          "banner": "http://placehold.it/128x128",
+          "name": "Ohmnet",
+          "about": "Velit quis minim ea est ea exercitation culpa elit anim pariatur nisi. Duis cupidatat anim duis ex sunt duis deserunt sit. Sunt qui Lorem nostrud Lorem laboris dolor laboris ad dolore dolor nulla esse. Ad laboris sunt aliqua quis deserunt. In est anim fugiat sint.",
+          "price": 1895,
+          "stock": 13
+        },
+        {
+          "id": "60a6732738b9656bad92d182",
+          "image": "http://placehold.it/64x64",
+          "banner": "http://placehold.it/128x128",
+          "name": "Hinway",
+          "about": "Cupidatat est mollit id irure occaecat in quis laboris mollit enim incididunt. Nulla in ex nisi id. Non amet laborum id exercitation consequat enim sunt velit occaecat aute. Exercitation do anim reprehenderit dolore est cupidatat consequat proident culpa aliqua ut. Velit veniam anim ex proident officia exercitation ex magna consectetur. Pariatur aliquip non nisi esse ut nisi non sunt qui. Deserunt ut reprehenderit dolor ea duis reprehenderit consectetur dolore velit sunt proident.",
+          "price": 722,
+          "stock": 5
+        },
+        {
+          "id": "60a6732701b8a25708e5cac0",
+          "image": "http://placehold.it/64x64",
+          "banner": "http://placehold.it/128x128",
+          "name": "Bleendot",
+          "about": "Ut exercitation ullamco ipsum nulla. Elit in id amet consequat officia est deserunt ad aliquip magna. Tempor cupidatat adipisicing esse Lorem nisi reprehenderit.",
+          "price": 1993,
+          "stock": 11
+        },
+        {
+          "id": "60a67327e37e0923531ade66",
+          "image": "http://placehold.it/64x64",
+          "banner": "http://placehold.it/128x128",
+          "name": "Renovize",
+          "about": "Exercitation enim anim ea nulla qui est ut veniam aliqua esse anim excepteur. Anim elit eiusmod aliqua officia consequat Lorem eiusmod in ad ea aute aute sunt ex. Magna ex sunt ex laborum enim irure. Deserunt fugiat commodo aliqua Lorem proident laborum non. Labore magna non do ut aliqua nostrud est nisi quis. Amet ullamco ad culpa fugiat ea mollit enim irure cupidatat. Amet ipsum irure exercitation ea excepteur laborum do anim deserunt ut aliquip adipisicing aliqua mollit.",
+          "price": 1639,
+          "stock": 9
+        },
+        {
+          "id": "60a673277b07bdb9931a45c4",
+          "image": "http://placehold.it/64x64",
+          "banner": "http://placehold.it/128x128",
+          "name": "Apex",
+          "about": "Aute exercitation exercitation sint aliquip sit exercitation duis excepteur sint amet reprehenderit aute. Lorem nostrud nulla commodo officia sunt ex quis adipisicing proident in pariatur. Ad ad elit exercitation dolore amet tempor irure eiusmod. Sint cupidatat culpa cupidatat exercitation magna labore dolor laborum. Excepteur consectetur sint consequat quis Lorem id adipisicing esse amet ut et. Voluptate nisi incididunt ad incididunt laborum. Pariatur irure dolore laboris mollit excepteur adipisicing et sint proident voluptate.",
+          "price": 1277,
+          "stock": 8
+        },
+        {
+          "id": "60a6732765a5f36a5b0344c2",
+          "image": "http://placehold.it/64x64",
+          "banner": "http://placehold.it/128x128",
+          "name": "Zipak",
+          "about": "Ad nisi aliqua sunt labore pariatur velit id. Amet consectetur culpa quis Lorem officia occaecat mollit laborum pariatur. Eiusmod officia sint sunt ex Lorem tempor mollit exercitation enim esse consectetur labore magna.",
+          "price": 1842,
+          "stock": 8
+        },
+        {
+          "id": "60a6732790e4a835c00072e8",
+          "image": "http://placehold.it/64x64",
+          "banner": "http://placehold.it/128x128",
+          "name": "Bovis",
+          "about": "Officia id deserunt non consequat do in ut laboris nisi sit nisi labore. Veniam labore fugiat reprehenderit reprehenderit veniam deserunt. Irure anim enim fugiat exercitation minim quis dolore nostrud eu est. Qui in nisi velit aliquip aliquip qui. Consequat non consectetur elit veniam minim ullamco proident magna Lorem id fugiat officia.",
+          "price": 1531,
+          "stock": 20
+        }
+      ],
+      "orders": []
+}
