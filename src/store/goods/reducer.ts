@@ -20,12 +20,12 @@ const goodsReducer = function (state = initialState, action: AnyAction) {
     case SET_GOODS:
       return {
         ...state,
-        goods: action.payload.map((good: IGood) => ({
+        data: action.payload.map((good: IGood) => ({
           ...good,
           available: good.available,
         })),
         status: Statuses.SUCCESS,
-        available: action.payload.length,
+        // available: action.payload.length,
       };
     case FETCH_GOODS:
       return { ...state, status: Statuses.LOADING };
@@ -38,14 +38,14 @@ const goodsReducer = function (state = initialState, action: AnyAction) {
       const targetGood = newGoods.find(({ id }) => id === action.payload);
       if (targetGood) targetGood.available -= 1;
 
-      return { ...state, goods: newGoods };
+      return { ...state, data: newGoods };
 
     case REMOVE_FROM_CART:
       const copyGoods = deepCopy(state.data);
       const exactGood = copyGoods.find(({ id }) => id === action.payload);
       if (exactGood) exactGood.available += 1;
 
-      return { ...state, goods: copyGoods };
+      return { ...state, data: copyGoods };
 
     default:
       return state;

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Layout from "./components/Layout";
+import GoodsContainer from "./containers/Goods";
 import { setGoodsAction } from "./store/goods/actions";
 
 const fetchGoods = () => {
@@ -23,8 +24,10 @@ function App() {
     <Router>
       <Layout>
         <Switch>
-          <Route path="/orders">orders</Route>
-          <Route path="/">home</Route>
+          <Route path="/orders">Orders</Route>
+          <Route path="/">
+            <GoodsContainer />
+          </Route>
         </Switch>
       </Layout>
     </Router>
