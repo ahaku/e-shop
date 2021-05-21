@@ -1,0 +1,8 @@
+.cart-modal {
+  min-height: 200px;
+}
+.cart-modal__empty {
+  display: grid;
+  place-items: center;
+  height: 150px;
+}

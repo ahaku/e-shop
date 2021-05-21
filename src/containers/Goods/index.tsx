@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { getGoods } from "../../store/goods/selectors";
 import "./index.css";
 import GoodItem from "./Good";

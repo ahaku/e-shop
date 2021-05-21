@@ -1,5 +1,4 @@
 import React from "react";
-import { IGood } from "../../../../store/goods/i";
 import "./index.css";
 interface IGoodModalContent {
   removeButton: React.ReactNode;

@@ -17,6 +17,10 @@
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   transform: translate(-50%, -50%);
 }
+.modal-main__content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
 .modal .modal-main__header {
   height: 46px;
 }

@@ -16,7 +16,7 @@ const OrdersContainer = () => {
     fetchOrders().then((res) => {
       dispatch(setOrdersAction(res));
     });
-  }, []);
+  }, [dispatch]);
   if (orders && orders.length === 0)
     return <div className="container">No orders</div>;
   return (

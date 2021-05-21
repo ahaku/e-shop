@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { resetCartAction } from "../../../store/cart/actions";
 import { getCart } from "../../../store/cart/selectors";
 import { setGoodsAction } from "../../../store/goods/actions";
-import { IGood } from "../../../store/goods/i";
 import { getGoods } from "../../../store/goods/selectors";
 import { removeZeroValues, randomId } from "../../../utils/helpers";
 import {
@@ -11,6 +10,7 @@ import {
   getUpdatingGoodsList,
   responseListToJSON,
 } from "./helpers";
+import "./index.css";
 
 const CartModalContent = ({ total, hideModal }: any) => {
   const dispatch = useDispatch();
@@ -78,6 +78,7 @@ const CartModalContent = ({ total, hideModal }: any) => {
             </div>
           );
         }
+        return null;
       })}
       {total ? (
         <div className="cart-modal__total">
@@ -89,7 +90,7 @@ const CartModalContent = ({ total, hideModal }: any) => {
           </form>
         </div>
       ) : (
-        <div>cart is empty</div>
+        <div className="cart-modal__empty">cart is empty</div>
       )}
     </div>
   );
