@@ -7,7 +7,8 @@ import GoodItem from "./Good";
 const GoodsContainer = () => {
   const goods = useSelector(getGoods);
 
-  if (goods && goods.length === 0) return <div>No data</div>;
+  if (goods && goods.length === 0)
+    return <div className="no-data-container container">No data</div>;
 
   return (
     <div className="goods">

@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Button from "../../../components/Button";
 import { resetCartAction } from "../../../store/cart/actions";
 import { getCart } from "../../../store/cart/selectors";
 import { setGoodsAction } from "../../../store/goods/actions";
@@ -74,19 +75,27 @@ const CartModalContent = ({ total, hideModal }: any) => {
 
           return (
             <div key={goodId} className="cart-modal__item">
-              {name} {inCartCount} x {price} $
+              <span className="cart-modal__item-info">
+                {name} {inCartCount} x {price} $
+              </span>
+              <div className="cart-modal__controls">
+                <Button additionalClassName="cart-modal__item-btn">-</Button>
+                <Button additionalClassName="cart-modal__item-btn">+</Button>
+              </div>
             </div>
           );
         }
         return null;
       })}
       {total ? (
-        <div className="cart-modal__total">
-          Total: {total} $
-          <form onSubmit={handleSubmit}>
-            <input type="text" name="name" placeholder="Name" />
-            <input type="tel" name="phone" placeholder="Phone" />
-            <button type="submit">Create order</button>
+        <div className="cart-modal__result">
+          <span className="cart-modal__total">Total: {total} $</span>
+          <form className="cart-modal__form" onSubmit={handleSubmit}>
+            <div className="cart-modal__inputs">
+              <input type="text" name="name" placeholder="Name" />
+              <input type="tel" name="phone" placeholder="Phone" />
+            </div>
+            <Button type="submit">Create order</Button>
           </form>
         </div>
       ) : (

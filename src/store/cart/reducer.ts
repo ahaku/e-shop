@@ -1,5 +1,10 @@
 import { AnyAction } from "redux";
-import { ADD_TO_CART, REMOVE_FROM_CART, RESET_CART } from "../types";
+import {
+  ADD_TO_CART,
+  ERROR_GOODS,
+  REMOVE_FROM_CART,
+  RESET_CART,
+} from "../types";
 import { ICart } from "./i";
 
 const initialState: ICart = {
@@ -28,6 +33,8 @@ const cartReducer = function (state = initialState, action: AnyAction) {
         },
       };
     case RESET_CART:
+      return initialState;
+    case ERROR_GOODS:
       return initialState;
     default:
       return state;

@@ -18,7 +18,7 @@ const OrdersContainer = () => {
     });
   }, [dispatch]);
   if (orders && orders.length === 0)
-    return <div className="container">No orders</div>;
+    return <div className="no-data-container container">No orders</div>;
   return (
     <div className="orders container">
       {orders.length

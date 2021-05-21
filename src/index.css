@@ -13,3 +13,8 @@ body {
 body.modal-open {
   overflow: hidden;
 }
+.no-data-container {
+  display: grid;
+  place-items: center;
+  height: 80vh;
+}

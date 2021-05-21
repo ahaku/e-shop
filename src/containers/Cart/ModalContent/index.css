@@ -6,3 +6,33 @@
   place-items: center;
   height: 150px;
 }
+.cart-modal__form {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: auto 100px;
+  gap: 1rem;
+}
+.cart-modal__inputs {
+  display: grid;
+  gap: 1rem;
+  flex-direction: column;
+}
+.cart-modal__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.cart-modal__item-info {
+  margin-right: 1rem;
+}
+.cart-modal__controls {
+  display: grid;
+  grid-template-columns: repeat(2, 24px);
+  gap: 8px;
+}
+
+.cart-modal__item-btn {
+  padding: 0;
+  width: 24px;
+  height: 24px;
+}
