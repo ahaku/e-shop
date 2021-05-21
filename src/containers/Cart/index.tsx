@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { CartButton } from "../../components/Buttons";
 import Modal from "../../components/Modal";
 import { getCart } from "../../store/cart/selectors";
 import { getGoods } from "../../store/goods/selectors";
@@ -32,7 +33,7 @@ const CartContainer = () => {
   return (
     <>
       <div>
-        <button onClick={showModal}>Cart {total ? `${total} $` : null}</button>
+        <CartButton onClick={showModal} total={total} />
       </div>
       <Modal show={show} handleClose={hideModal}>
         <CartModalContent {...{ total, hideModal }} />

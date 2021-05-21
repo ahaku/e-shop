@@ -17,3 +17,8 @@
   height: 100%;
   object-fit: cover;
 }
+.cart-actions-btn {
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+}

@@ -39,13 +39,21 @@ const GoodItem = ({
     setShow(false);
   };
   const removeButton = (
-    <Button onClick={removeFromCart} disabled={available === stock}>
-      Remove
+    <Button
+      onClick={removeFromCart}
+      disabled={available === stock}
+      additionalClassName="cart-actions-btn"
+    >
+      -
     </Button>
   );
   const addToCartButton = (
-    <Button onClick={addToCart} disabled={available === 0}>
-      Add to cart
+    <Button
+      onClick={addToCart}
+      disabled={available === 0}
+      additionalClassName="cart-actions-btn"
+    >
+      +
     </Button>
   );
   return (

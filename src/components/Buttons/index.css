@@ -1,0 +1,13 @@
+.shopping-cart-button {
+  padding: 10px;
+  background-color: #ffffff;
+  border: none;
+}
+
+.shopping-cart-button:hover {
+  cursor: pointer;
+  background-color: #f3f3f3;
+}
+.shopping-cart-button:active {
+  background-color: #e4e4e4;
+}
