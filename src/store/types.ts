@@ -1,3 +1,4 @@
+import { IOrders } from "./orders/i";
 import { ICart } from "./cart/i";
 import { IGoods } from "./goods/i";
 
@@ -20,4 +21,5 @@ export enum Statuses {
 export interface IStore {
   goods: IGoods;
   cart: ICart;
+  orders: IOrders;
 }

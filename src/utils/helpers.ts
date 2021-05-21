@@ -10,3 +10,14 @@ export const removeZeroValues = (obj: {
   [key: string]: number;
 }): { [key: string]: number } =>
   Object.fromEntries(Object.entries(obj).filter(([_, v]) => v !== 0));
+export const getDateFromISO = (dateStr: string) => {
+  const date = new Date(dateStr);
+  const dateTimeFormat = new Intl.DateTimeFormat("en", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  });
+  return dateTimeFormat.format(date);
+};

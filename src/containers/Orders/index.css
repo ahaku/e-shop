@@ -1,0 +1,9 @@
+.orders {
+  padding-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+.orders__item {
+  padding: 12px 24px;
+  border: 1px solid pink;
+}

@@ -5,8 +5,8 @@ export interface IOrders {
 
 export interface IOrder {
   id: string;
-  date: Date;
-  data: IOrderData;
+  date: string;
+  data: IOrderData[];
   name: string;
   phone: string;
 }

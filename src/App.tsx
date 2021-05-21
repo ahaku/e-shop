@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import GoodsContainer from "./containers/Goods";
+import OrdersContainer from "./containers/Orders";
 import { getCart } from "./store/cart/selectors";
 import { setGoodsAction, setGoodsError } from "./store/goods/actions";
 import { IGood } from "./store/goods/i";
@@ -34,7 +35,9 @@ function App() {
     <Router>
       <Layout>
         <Switch>
-          <Route path="/orders">Orders</Route>
+          <Route path="/orders">
+            <OrdersContainer />
+          </Route>
           <Route path="/">
             <GoodsContainer />
           </Route>
