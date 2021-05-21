@@ -8,6 +8,7 @@ export const ERROR_GOODS = "ERROR_GOODS";
 export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 export const RESET_CART = "RESET_CART";
+export const SET_ORDERS = "SET_ORDERS";
 
 export enum Statuses {
   IDLE = "IDLE",

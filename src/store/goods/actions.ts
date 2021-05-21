@@ -2,6 +2,7 @@ import { IGood } from "./i";
 import {
   ADD_TO_CART,
   DECREASE_GOODS,
+  ERROR_GOODS,
   REMOVE_FROM_CART,
   SET_GOODS,
 } from "../types";
@@ -10,6 +11,12 @@ export function setGoodsAction(data: IGood[]) {
   return {
     type: SET_GOODS,
     payload: data,
+  };
+}
+
+export function setGoodsError() {
+  return {
+    type: ERROR_GOODS,
   };
 }
 

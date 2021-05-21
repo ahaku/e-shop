@@ -16,3 +16,6 @@
   color: white;
   text-decoration: none;
 }
+nav .header__cart {
+  margin-left: auto;
+}

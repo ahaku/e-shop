@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
+import CartContainer from "../../containers/Cart";
 import "./index.css";
 
 interface ILayout {
@@ -15,6 +16,9 @@ const Layout: FC<ILayout> = ({ children }) => {
             <span className="header__title">E-Shop</span>
           </Link>
           <Link to="/orders">Orders</Link>
+          <div className="header__cart">
+            <CartContainer />
+          </div>
         </nav>
       </div>
       {children}

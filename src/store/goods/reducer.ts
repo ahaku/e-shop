@@ -31,7 +31,7 @@ const goodsReducer = function (state = initialState, action: AnyAction) {
       return { ...state, status: Statuses.LOADING };
 
     case ERROR_GOODS:
-      return { ...state, status: Statuses.FAILURE };
+      return { ...state, status: Statuses.FAILURE, data: [] };
 
     case ADD_TO_CART:
       const newGoods = deepCopy(state.data);

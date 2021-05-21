@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import GoodsContainer from "./containers/Goods";
 import { getCart } from "./store/cart/selectors";
-import { setGoodsAction } from "./store/goods/actions";
+import { setGoodsAction, setGoodsError } from "./store/goods/actions";
 import { IGood } from "./store/goods/i";
 
 const fetchGoods = () => {
@@ -25,7 +25,7 @@ function App() {
         dispatch(setGoodsAction(newGoods));
       })
       .catch((err) => {
-        dispatch(setGoodsAction([]));
+        dispatch(setGoodsError());
         console.log(err);
       });
   }, [dispatch]);
