@@ -1,5 +1,6 @@
 import React from "react";
 import { IGood } from "../../../../store/goods/i";
+import "./index.css";
 interface IGoodModalContent {
   removeButton: React.ReactNode;
   addButton: React.ReactNode;
@@ -7,6 +8,7 @@ interface IGoodModalContent {
   banner: string;
   about: string;
   available: number;
+  price: number;
 }
 const GoodModalContent = ({
   removeButton,
@@ -15,14 +17,23 @@ const GoodModalContent = ({
   name,
   banner,
   available,
+  price,
 }: IGoodModalContent) => {
   return (
     <div className="good-modal-content">
-      <div className="good-modal-content__image">
-        <img src={banner} alt={name} />
+      <div className="good-modal-content__header">
+        <div className="good-modal-content__image">
+          <img src={banner} alt={name} />
+        </div>
+        <div className="good-modal-content__bio">
+          {name} {price} $
+        </div>
       </div>
-      <div className="good-modal-content__about">{about}</div>
-      <div className="good-modal-content__info">Available: {available}</div>
+
+      <p className="good-modal-content__about">{about}</p>
+      <div className="good-modal-content__info">
+        <small>Available: {available}</small>
+      </div>
 
       <div className="good-modal-content__controls">
         {removeButton}

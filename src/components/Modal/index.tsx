@@ -15,7 +15,7 @@ const Modal: FC<IModal> = ({ children, handleClose, show = false }) => {
   return (
     <div className={showHideClassName}>
       <section className="modal-main">
-        {closeButton}
+        <div className="modal-main__header">{closeButton}</div>
         {children}
       </section>
     </div>

@@ -73,6 +73,7 @@ const GoodItem = ({
             available,
             banner,
             about,
+            price,
             removeButton,
             addButton: addToCartButton,
           }}
