@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setOrdersAction } from "../../store/orders/actions";
 import { getOrders } from "../../store/orders/selectors";
-import { getDateFromISO } from "../../utils/helpers";
+import { getDateFromISO, getMoneyString } from "../../utils/helpers";
 import "./index.css";
 
 const fetchOrders = () => {
@@ -29,7 +29,7 @@ const OrdersContainer = () => {
             return (
               <div className="orders__item" key={id}>
                 <small>{getDateFromISO(date)}</small>
-                <div>Order cost: {total} $</div>
+                <div>Order cost: {getMoneyString(total)}</div>
               </div>
             );
           })

@@ -1,4 +1,5 @@
 import React from "react";
+import { getMoneyString } from "../../../../utils/helpers";
 import "./index.css";
 interface IGoodModalContent {
   removeButton: React.ReactNode;
@@ -25,7 +26,7 @@ const GoodModalContent = ({
           <img src={banner} alt={name} />
         </div>
         <div className="good-modal-content__bio">
-          {name} {price} $
+          {name} {getMoneyString(price)}
         </div>
       </div>
 

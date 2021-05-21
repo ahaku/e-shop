@@ -17,6 +17,12 @@
   height: 100%;
   object-fit: cover;
 }
+.good__controls {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 40px 40px;
+}
+
 .cart-actions-btn {
   font-weight: bold;
   width: 40px;

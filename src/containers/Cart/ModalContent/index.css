@@ -1,5 +1,7 @@
 .cart-modal {
+  box-sizing: border-box;
   min-height: 200px;
+  padding: 0 20px;
 }
 .cart-modal__empty {
   display: grid;
@@ -7,10 +9,23 @@
   height: 150px;
 }
 .cart-modal__form {
-  margin-top: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   display: grid;
   grid-template-columns: auto 100px;
   gap: 1rem;
+}
+.cart-modal input {
+  border: 1px solid pink;
+  height: 30px;
+}
+.cart-modal input:focus-visible {
+  border: 1px solid red;
+}
+.cart-modal__submit {
+  height: 34px;
+  font-size: 12px;
+  align-self: flex-end;
 }
 .cart-modal__inputs {
   display: grid;
@@ -24,6 +39,7 @@
 }
 .cart-modal__item-info {
   margin-right: 1rem;
+  min-width: 160px;
 }
 .cart-modal__controls {
   display: grid;
@@ -35,4 +51,9 @@
   padding: 0;
   width: 24px;
   height: 24px;
+}
+@media (max-width: 560px) {
+  .cart-modal__form {
+    grid-template-columns: auto;
+  }
 }

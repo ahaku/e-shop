@@ -7,6 +7,7 @@ import {
   removeFromCartAction,
 } from "../../../store/goods/actions";
 import { IGood } from "../../../store/goods/i";
+import { getMoneyString } from "../../../utils/helpers";
 import "./index.css";
 import GoodModalContent from "./ModalContent";
 const GoodItem = ({
@@ -63,7 +64,7 @@ const GoodItem = ({
           <img src={image} alt={name} />
         </div>
         <strong className="good__name">
-          {name} <span>{price} $</span>
+          {name} <span>{getMoneyString(price)}</span>
         </strong>
 
         <div className="good__info">

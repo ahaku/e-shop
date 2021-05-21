@@ -3,9 +3,17 @@ import { useDispatch, useSelector } from "react-redux";
 import Button from "../../../components/Button";
 import { resetCartAction } from "../../../store/cart/actions";
 import { getCart } from "../../../store/cart/selectors";
-import { setGoodsAction } from "../../../store/goods/actions";
+import {
+  addToCartAction,
+  removeFromCartAction,
+  setGoodsAction,
+} from "../../../store/goods/actions";
 import { getGoods } from "../../../store/goods/selectors";
-import { removeZeroValues, randomId } from "../../../utils/helpers";
+import {
+  removeZeroValues,
+  randomId,
+  getMoneyString,
+} from "../../../utils/helpers";
 import {
   createOrder,
   getUpdatingGoodsList,
@@ -13,10 +21,22 @@ import {
 } from "./helpers";
 import "./index.css";
 
-const CartModalContent = ({ total, hideModal }: any) => {
+interface ICartModalContent {
+  total: number;
+  hideModal: () => void;
+}
+
+const CartModalContent = ({ total, hideModal }: ICartModalContent) => {
   const dispatch = useDispatch();
   const goods = useSelector(getGoods);
   const cartData = useSelector(getCart);
+
+  const addToCart = (goodId: string) => {
+    dispatch(addToCartAction(goodId));
+  };
+  const removeFromCart = (goodId: string) => {
+    dispatch(removeFromCartAction(goodId));
+  };
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -72,15 +92,27 @@ const CartModalContent = ({ total, hideModal }: any) => {
           const good = goods.find(({ id }) => id === goodId);
           const price = good?.price;
           const name = good?.name;
+          const available = good?.available;
 
           return (
             <div key={goodId} className="cart-modal__item">
               <span className="cart-modal__item-info">
-                {name} {inCartCount} x {price} $
+                {name} {inCartCount} x {getMoneyString(price as number)}
               </span>
               <div className="cart-modal__controls">
-                <Button additionalClassName="cart-modal__item-btn">-</Button>
-                <Button additionalClassName="cart-modal__item-btn">+</Button>
+                <Button
+                  onClick={() => removeFromCart(goodId)}
+                  additionalClassName="cart-modal__item-btn"
+                >
+                  -
+                </Button>
+                <Button
+                  onClick={() => addToCart(goodId)}
+                  additionalClassName="cart-modal__item-btn"
+                  disabled={available === 0}
+                >
+                  +
+                </Button>
               </div>
             </div>
           );
@@ -89,13 +121,17 @@ const CartModalContent = ({ total, hideModal }: any) => {
       })}
       {total ? (
         <div className="cart-modal__result">
-          <span className="cart-modal__total">Total: {total} $</span>
+          <span className="cart-modal__total">
+            Total: {getMoneyString(total)}
+          </span>
           <form className="cart-modal__form" onSubmit={handleSubmit}>
             <div className="cart-modal__inputs">
-              <input type="text" name="name" placeholder="Name" />
-              <input type="tel" name="phone" placeholder="Phone" />
+              <input required type="text" name="name" placeholder="Name" />
+              <input required type="tel" name="phone" placeholder="Phone" />
             </div>
-            <Button type="submit">Create order</Button>
+            <Button type="submit" additionalClassName="cart-modal__submit">
+              Create order
+            </Button>
           </form>
         </div>
       ) : (

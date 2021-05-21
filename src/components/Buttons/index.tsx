@@ -1,3 +1,4 @@
+import { getMoneyString } from "../../utils/helpers";
 import "./index.css";
 interface ICartButton {
   onClick: () => void;
@@ -11,7 +12,9 @@ export const CartButton = ({ onClick, total }: ICartButton) => {
       data-toggle="shopping-cart-dropdown"
       onClick={onClick}
     >
-      <span className="text">Cart {total ? `(${total} $)` : null}</span>
+      <span className="text">
+        Cart {total ? `(${getMoneyString(total)})` : null}
+      </span>
     </button>
   );
 };

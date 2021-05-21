@@ -10,6 +10,7 @@ export const removeZeroValues = (obj: {
   [key: string]: number;
 }): { [key: string]: number } =>
   Object.fromEntries(Object.entries(obj).filter(([_, v]) => v !== 0));
+
 export const getDateFromISO = (dateStr: string) => {
   const date = new Date(dateStr);
   const dateTimeFormat = new Intl.DateTimeFormat("en", {
@@ -20,4 +21,12 @@ export const getDateFromISO = (dateStr: string) => {
     minute: "numeric",
   });
   return dateTimeFormat.format(date);
+};
+
+export const getMoneyString = (amount: number): string => {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 0,
+  }).format(amount);
 };
