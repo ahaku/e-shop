@@ -1,4 +1,5 @@
 import { getMoneyString } from "../../utils/helpers";
+
 import "./index.css";
 interface ICartButton {
   onClick: () => void;
@@ -6,15 +7,17 @@ interface ICartButton {
 }
 export const CartButton = ({ onClick, total }: ICartButton) => {
   return (
-    <button
-      type="button"
-      className="shopping-cart-button float-right"
-      data-toggle="shopping-cart-dropdown"
-      onClick={onClick}
-    >
-      <span className="text">
-        Cart {total ? `(${getMoneyString(total)})` : null}
-      </span>
+    <button type="button" className="shopping-cart-button" onClick={onClick}>
+      <img
+        className="shopping-cart-button__image"
+        src={"/shopping-cart.png"}
+        alt="cart"
+      />
+      {total ? (
+        <span className="shopping-cart-button__total">
+          {`(${getMoneyString(total)})`}
+        </span>
+      ) : null}
     </button>
   );
 };

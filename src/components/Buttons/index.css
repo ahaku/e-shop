@@ -1,5 +1,7 @@
 .shopping-cart-button {
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  padding: 6px 8px 6px 5px;
   background-color: #ffffff;
   border: none;
 }
@@ -10,4 +12,11 @@
 }
 .shopping-cart-button:active {
   background-color: #e4e4e4;
+}
+.shopping-cart-button__image {
+  width: 20px;
+  height: 20px;
+}
+.shopping-cart-button__total {
+  margin-left: 4px;
 }

@@ -26,7 +26,8 @@ const GoodModalContent = ({
           <img src={banner} alt={name} />
         </div>
         <div className="good-modal-content__bio">
-          {name} {getMoneyString(price)}
+          <span className="good-modal-content__name">{name} </span>
+          {getMoneyString(price)}
         </div>
       </div>
 

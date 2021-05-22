@@ -17,5 +17,5 @@
 }
 .button:disabled {
   background: lightgray;
-  cursor: no-drop;
+  cursor: auto;
 }
