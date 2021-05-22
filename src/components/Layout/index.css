@@ -10,8 +10,6 @@
 .header nav > * {
   margin: 0px 12px;
 }
-/* .header__title {
-} */
 .header a {
   padding: 4px 0;
   color: #222222;
@@ -28,5 +26,6 @@
 nav .header__cart {
   margin-left: auto;
 }
-/* .header__active-link {
-} */
+a.header__active-link {
+  background: linear-gradient(currentColor 0 0) 100% 100% / 100% 2px no-repeat;
+}

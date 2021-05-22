@@ -13,7 +13,7 @@ const Layout: FC<ILayout> = ({ children }) => {
       <div className="header">
         <nav className="container">
           <NavLink activeClassName="header__active-link" exact to="/">
-            <span className="header__title">E-Shop</span>
+            E-Shop
           </NavLink>
           <NavLink activeClassName="header__active-link" to="/orders">
             Orders
