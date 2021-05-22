@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CartContainer from "../../containers/Cart";
 import "./index.css";
 
@@ -12,10 +12,12 @@ const Layout: FC<ILayout> = ({ children }) => {
     <div>
       <div className="header">
         <nav className="container">
-          <Link to="/">
+          <NavLink activeClassName="header__active-link" exact to="/">
             <span className="header__title">E-Shop</span>
-          </Link>
-          <Link to="/orders">Orders</Link>
+          </NavLink>
+          <NavLink activeClassName="header__active-link" to="/orders">
+            Orders
+          </NavLink>
           <div className="header__cart">
             <CartContainer />
           </div>

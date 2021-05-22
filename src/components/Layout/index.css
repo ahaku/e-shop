@@ -9,13 +9,22 @@
 .header nav > * {
   margin: 0px 12px;
 }
-.header__title {
-  font-weight: bold;
-}
+/* .header__title {
+} */
 .header a {
-  color: white;
+  padding: 4px 0;
+  color: #222222;
   text-decoration: none;
+  background: linear-gradient(currentColor 0 0) var(--bgPos, 0) 100% /
+    var(--bgSize, 0) 2px no-repeat;
+  transition: 0.2s, background-position 0s 0.2s;
+}
+.header a:hover {
+  --bgSize: 100%;
+  --bgPos: 100%;
 }
 nav .header__cart {
   margin-left: auto;
 }
+/* .header__active-link {
+} */

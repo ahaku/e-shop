@@ -22,7 +22,22 @@
   gap: 10px;
   grid-template-columns: 40px 40px;
 }
-
+.good__row {
+  padding: 20px 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.good__price {
+  color: rgb(46, 114, 55);
+}
+.good__name {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.good__available {
+  color: darkgray;
+}
 .cart-actions-btn {
   font-weight: bold;
   width: 40px;

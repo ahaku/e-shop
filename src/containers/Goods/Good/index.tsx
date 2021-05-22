@@ -63,16 +63,21 @@ const GoodItem = ({
         <div className="good__image">
           <img src={image} alt={name} />
         </div>
-        <strong className="good__name">
-          {name} <span>{getMoneyString(price)}</span>
-        </strong>
+        <div className="good__row">
+          <div className="good__overall">
+            <strong className="good__info">
+              <span className="good__name">{name}</span>
+              <div className="good__price">{getMoneyString(price)}</div>
+            </strong>
 
-        <div className="good__info">
-          <small>Available: {available}</small>
-        </div>
-        <div className="good__controls">
-          {removeButton}
-          {addToCartButton}
+            <div className="good__available">
+              <small>Available: {available}</small>
+            </div>
+          </div>
+          <div className="good__controls">
+            {removeButton}
+            {addToCartButton}
+          </div>
         </div>
       </div>
       <Modal show={show} handleClose={hideModal}>
