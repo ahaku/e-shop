@@ -130,7 +130,7 @@ const CartModalContent = ({ total, hideModal }: ICartModalContent) => {
               <input required type="tel" name="phone" placeholder="Phone" />
             </div>
             <Button type="submit" additionalClassName="cart-modal__submit">
-              Create order
+              Buy
             </Button>
           </form>
         </div>
