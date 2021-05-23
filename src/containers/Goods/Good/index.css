@@ -1,8 +1,21 @@
 .good {
+  position: relative;
   width: 200px;
   height: 300px;
   border: 1px solid pink;
   transition: box-shadow 0.2s;
+}
+.good__overlay {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  pointer-events: none;
 }
 .good:hover {
   cursor: pointer;

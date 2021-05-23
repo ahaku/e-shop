@@ -13,9 +13,14 @@ const OrdersContainer = () => {
   const dispatch = useDispatch();
   const orders = useSelector(getOrders);
   useEffect(() => {
-    fetchOrders().then((res) => {
-      dispatch(setOrdersAction(res));
-    });
+    fetchOrders()
+      .then((res) => {
+        dispatch(setOrdersAction(res));
+      })
+      .catch((err) => {
+        console.log(err);
+        dispatch(setOrdersAction([]));
+      });
   }, [dispatch]);
   if (orders && orders.length === 0)
     return <div className="no-data-container container">No orders</div>;

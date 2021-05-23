@@ -57,9 +57,11 @@ const GoodItem = ({
       +
     </Button>
   );
+  const isSoldOut = stock === 0;
   return (
     <>
       <div className="good" onClick={showModal}>
+        {isSoldOut && <div className="good__overlay">Sold out</div>}
         <div className="good__image">
           <img src={image} alt={name} />
         </div>
