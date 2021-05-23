@@ -13,4 +13,5 @@ export interface IOrder {
 
 export interface IOrderData extends IGood {
   count: number;
+  uid: string;
 }

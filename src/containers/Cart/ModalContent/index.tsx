@@ -63,7 +63,7 @@ const CartModalContent = ({ total, hideModal }: ICartModalContent) => {
         const orderData = Object.entries({ ...cartDataWithCount }).map(
           ([goodId, count]) => {
             const purchasedGood = goods.find((good) => good.id === goodId);
-            return { ...purchasedGood, count };
+            return { ...purchasedGood, count, uid: randomId() };
           }
         );
         const order = {

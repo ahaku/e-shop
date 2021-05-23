@@ -1,9 +1,17 @@
 .orders {
-  padding-top: 1rem;
+  padding: 1rem;
   display: grid;
   gap: 1rem;
 }
 .orders__item {
+  max-width: 500px;
   padding: 12px 24px;
   border: 1px solid pink;
+}
+.orders__item-list {
+  margin-top: 1rem;
+}
+.orders__item-list ul {
+  list-style-type: square;
+  margin-top: 0;
 }

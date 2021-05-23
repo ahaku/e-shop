@@ -34,7 +34,20 @@ const OrdersContainer = () => {
             return (
               <div className="orders__item" key={id}>
                 <small>{getDateFromISO(date)}</small>
-                <div>Order cost: {getMoneyString(total)}</div>
+                <div>
+                  <strong>Order cost:</strong> {getMoneyString(total)}
+                </div>
+                <div className="orders__item-list">
+                  Goods in order:
+                  <ul>
+                    {data.map(({ uid, count, name, price }) => (
+                      <li key={uid}>
+                        <strong>{name}</strong> {count} x{" "}
+                        {getMoneyString(price)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             );
           })
