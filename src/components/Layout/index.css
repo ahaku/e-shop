@@ -29,3 +29,15 @@ nav .header__cart {
 a.header__active-link {
   background: linear-gradient(currentColor 0 0) 100% 100% / 100% 2px no-repeat;
 }
+@media (max-width: 320px) {
+  .header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header nav > * {
+    margin: 4px 0px;
+  }
+  nav .header__cart {
+    margin-left: initial;
+  }
+}
